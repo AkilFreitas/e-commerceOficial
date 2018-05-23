@@ -1,28 +1,55 @@
+
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.Id;
+import negocio.Endereco;
+import negocio.Usuario;
+
+
 /*
  * To change this license header, choose License Headers in Project Properties.
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-
 /**
  *
  * @author 20151d12gr0316
  */
-import negocio.Endereco;
+@Entity
 public class Cliente {
-//sdfsfdsf Corrigir osdddgit  devidos erros
-    int idade, rg, id;
-    String cpf, telefone, nome, email, dataDeNascimento, sexo;
+    
+    @Id
+    @GeneratedValue
+    private int id;
+    @Column(length = 20)
+    private int idade;
+    @Column(length = 20)
+    private int rg;
+    @Column(length = 20)
+    private String cpf;
+    @Column(length = 20)
+    private String telefone;
+    @Column(length = 20)
+    private String nome;
+    @Column(length = 20)
+    private String email;
+    @Column(length = 20)
+    private String dataDeNascimento;
+    @Column(length = 20)
+    private String sexo;
+    @Column(length = 20)
     Endereco endereco;
-    Login login;
+    @Column(length = 20)
+    Usuario login;
 
-    Cliente() {
+    public Cliente() {
     }
 
-    public Cliente(int idade, int rg, int id, String cpf, String telefone, String nome, String email, String dataDeNascimento, String sexo, Endereco endereco, Login login) {
+    public Cliente(int id, int idade, int rg, String cpf, String telefone, String nome, String email, String dataDeNascimento, String sexo, Endereco endereco, Usuario login) {
+        this.id = id;
         this.idade = idade;
         this.rg = rg;
-        this.id = id;
         this.cpf = cpf;
         this.telefone = telefone;
         this.nome = nome;
@@ -31,6 +58,14 @@ public class Cliente {
         this.sexo = sexo;
         this.endereco = endereco;
         this.login = login;
+    }
+
+    public int getId() {
+        return id;
+    }
+
+    public void setId(int id) {
+        this.id = id;
     }
 
     public int getIdade() {
@@ -47,14 +82,6 @@ public class Cliente {
 
     public void setRg(int rg) {
         this.rg = rg;
-    }
-
-    public int getId() {
-        return id;
-    }
-
-    public void setId(int id) {
-        this.id = id;
     }
 
     public String getCpf() {
@@ -113,11 +140,11 @@ public class Cliente {
         this.endereco = endereco;
     }
 
-    public Login getLogin() {
+    public Usuario getLogin() {
         return login;
     }
 
-    public void setLogin(Login login) {
+    public void setLogin(Usuario login) {
         this.login = login;
     }
 
@@ -126,11 +153,11 @@ public class Cliente {
     }
 
     public void efetuaLogin() {
-        
+
     }
-    
-    public void efetuaCompra(){
-        
+
+    public void efetuaCompra() {
+
     }
 
 }
