@@ -4,7 +4,7 @@ import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
 import negocio.Endereco;
-//import negocio.Usuario;
+import negocio.Usuario;
 
 
 /*
@@ -18,7 +18,7 @@ import negocio.Endereco;
  */
 @Entity
 public class Cliente {
-
+    
     @Id
     @GeneratedValue
     private int id;
