@@ -1,19 +1,38 @@
+
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.Id;
+import negocio.Cidade;
+
 /*
  * To change this license header, choose License Headers in Project Properties.
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-
 /**
  *
  * @author 20151d12gr0316
  */
+@Entity
 public class Endereco {
-    int id, cep, numero;
-    String rua, bairro;
+
+    @Id
+    @GeneratedValue
+    private int id;
+    @Column(length = 20)
+    private int cep;
+    @Column(length = 20)
+    private int numero;
+    @Column(length = 20)
+    private String rua;
+    @Column(length = 20)
+    private String bairro;
+    @Column(length = 20)
     Cidade cidade;
-    
-    Endereco(){
+
+   
+    public Endereco() {
     }
 
     public Endereco(int id, int cep, int numero, String rua, String bairro, Cidade cidade) {
@@ -72,11 +91,9 @@ public class Endereco {
     public void setCidade(Cidade cidade) {
         this.cidade = cidade;
     }
-    
-    
-    public void manterEndereco(){
-        
+
+    public void manterEndereco() {
+
     }
-    
-    
+
 }
