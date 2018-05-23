@@ -10,7 +10,7 @@ import javax.persistence.Id;
 public class Pagamento{
     @Id
     @GeneratedValue
-    private double id;
+    private int id;
     @Column(length = 20)
     private Enum tipoDePagamento;
     @Column(length = 20)
@@ -21,7 +21,7 @@ public class Pagamento{
        
     }
     
-    public Pagamento(double id, Enum tipoDePagamento, Date dataDePagamento, String nome) {
+    public Pagamento(int id, Enum tipoDePagamento, Date dataDePagamento, String nome) {
         this.id = id;
         this.tipoDePagamento = tipoDePagamento;
         this.dataDePagamento = dataDePagamento;
@@ -29,7 +29,7 @@ public class Pagamento{
        
     }
     
-    public double getId() {
+    public int getId() {
         return id;
     }
 
@@ -44,7 +44,7 @@ public class Pagamento{
     public String getNome() {
         return nome;
     }
-    public void setId(double id) {
+    public void setId(int id) {
         this.id = id;
     }
 

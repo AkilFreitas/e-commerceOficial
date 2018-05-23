@@ -18,7 +18,7 @@ import javax.persistence.Id;
 public class Usuario{
     @Id
     @GeneratedValue
-    private double id;
+    private int id;
     @Column(length = 20)
     private String email;
     @Column(length = 20)
@@ -32,7 +32,7 @@ public class Usuario{
        
     }
     
-    public Usuario(double id, String email, String senha, String nome, int cpf) {
+    public Usuario(int id, String email, String senha, String nome, int cpf) {
         this.id = id;
         this.email = email;
         this.senha = senha;
@@ -42,7 +42,7 @@ public class Usuario{
     
     
     
-    public double getId() {
+    public int getId() {
         return id;
     }
 
@@ -62,7 +62,7 @@ public class Usuario{
         return cpf;
     }
 
-    public void setId(double id) {
+    public void setId(int id) {
         this.id = id;
     }
 
