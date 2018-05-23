@@ -10,7 +10,7 @@
  */
 import negocio.Endereco;
 public class Cliente {
-//sdfsfdsf Corrigir os devidos erros
+//sdfsfdsf Corrigir osdddgit  devidos erros
     int idade, rg, id;
     String cpf, telefone, nome, email, dataDeNascimento, sexo;
     Endereco endereco;
