@@ -4,8 +4,6 @@ import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
 import negocio.Endereco;
-import negocio.Usuario;
-
 
 /*
  * To change this license header, choose License Headers in Project Properties.
@@ -17,8 +15,8 @@ import negocio.Usuario;
  * @author 20151d12gr0316
  */
 @Entity
-public class Cliente {
-    
+public class Cliente extends Usuario {
+
     @Id
     @GeneratedValue
     private int id;
